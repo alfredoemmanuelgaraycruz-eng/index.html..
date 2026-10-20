@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institucionalidad en El Salvador - Guía Educativa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        svBlue: '#0038A8',
+                        svLightBlue: '#1D70B8',
+                        svAccent: '#D4AF37'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-svBlue text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-building-columns text-2xl text-svAccent"></i>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight">Institucionalidad en El Salvador</h1>
+                    <p class="text-xs text-blue-100">Fortalecimiento de la Democracia y Estado de Derecho</p>
+                </div>
+            </div>
+            
+            <!-- Quick Search -->
+            <div class="relative w-full sm:w-72">
+                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Buscar institución..." class="w-full pl-9 pr-4 py-2 text-sm rounded-lg text-slate-800 bg-white/90 focus:bg-white focus:outline-none focus:ring-2 focus:ring-svAccent transition">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-sm"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-svBlue to-svLightBlue text-white py-12 px-4 shadow-inner">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <span class="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-semibold text-svAccent uppercase tracking-wider backdrop-blur-sm">
+                Estudio Social y Cívico
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">Las 9 Instituciones Autónomas e Independientes</h2>
+            <p class="text-sm sm:text-base text-blue-100 max-w-2xl mx-auto leading-relaxed">
+                Una de las principales características de la democracia salvadoreña es la existencia de órganos e instituciones independientes que velan por el cumplimiento legal, la justicia y los derechos de la ciudadanía.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+
+        <!-- Grid of 9 Institutions -->
+        <div id="institutionsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1: TSE -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">1. TSE</span>
+                    <i class="fa-solid fa-box-archive text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Tribunal Supremo Electoral</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Garantizar la administración autónoma y efectiva de los procesos electorales, mantener el registro electoral confiable y velar por el pleno ejercicio de los derechos políticos.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Integrado por 5 Magistrados Propietarios y sus suplentes, elegidos por la Asamblea Legislativa para un período de 5 años. Presidido por el Magistrado Presidente.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.tse.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2: FGR -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">2. FGR</span>
+                    <i class="fa-solid fa-scale-balanced text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Fiscalía General de la República</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Defender los intereses del Estado y de la Sociedad. Dirigir la investigación funcional del delito en colaboración con la Policía Nacional Civil (PNC) y ejercer la acción penal pública.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Encabezada por el Fiscal General de la República (electo por la Asamblea Legislativa por 3 años), acompañado por el Fiscal Adjunto y agentes fiscales.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.fiscalia.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3: CSJ -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">3. CSJ</span>
+                    <i class="fa-solid fa-gavel text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Corte Suprema de Justicia</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Ejerce de forma exclusiva la potestad de juzgar y hacer ejecutar lo juzgado en materia constitucional, penal, civil, mercantil, laboral y contencioso-administrativa.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Integrada por 15 Magistrados Propietarios divididos en 4 salas (Constitucional, Civil, Penal, Contencioso Administrativo) y presidida por el Presidente del Órgano Judicial.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.csj.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 4: CCR -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">4. CCR</span>
+                    <i class="fa-solid fa-calculator text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Corte de Cuentas de la República</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Fiscalizar y auditar la gestión económica y presupuestaria de todas las instituciones públicas y del uso de fondos estatales.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Un Presidente, Primer Magistrado y Segundo Magistrado elegidos por la Asamblea Legislativa por un período de 3 años, asistidos por auditores de la República.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.cortedecuentas.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 5: PDDH -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">5. PDDH</span>
+                    <i class="fa-solid fa-hands-holding-child text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Procuraduría para la Defensa de los Derechos Humanos</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Promover, velar y vigilar el respeto a los Derechos Humanos fundamental de la población, así como investigar actos violatorios cometidos por autoridades publicas.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Encabezada por el Procurador/a para la Defensa de los Derechos Humanos (electo por la Asamblea Legislativa por 3 años) y Procuradores Adjuntos en áreas temáticas.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://pddh.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 6: IAIP -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">6. IAIP</span>
+                    <i class="fa-solid fa-eye text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Instituto de Acceso a la Información Pública</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Garantizar el derecho de acceso a la información pública, promover la transparencia en la administración del Estado y proteger los datos personales de la ciudadanía.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Conformado por 5 Comisionados Propietarios nominados por diversos sectores de la sociedad (empresarios, profesionales, universidades, periodistas y sindicatos).</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.iaip.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 7: TEG -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">7. TEG</span>
+                    <i class="fa-solid fa-shield-halved text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Tribunal de Ética Gubernamental</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Promover, regular y sancionar las conductas éticas o actos de corrupción de los servidores públicos para asegurar un desempeño íntegro e imparcial.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Pleno de 5 Miembros Propietarios nombrados por: la Asamblea Legislativa, la Presidencia de la República, la Corte Suprema de Justicia, la Corte de Cuentas y Hacienda.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.teg.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 8: PGR -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">8. PGR</span>
+                    <i class="fa-solid fa-hand-holding-hand text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Procuraduría General de la República</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Ofrecer asistencia jurídica gratuita, representación legal y apoyo psicosocial a personas de escasos recursos, protegiendo la familia y los derechos laborales.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Dirigida por el Procurador/a General de la República (elegido/a por la Asamblea Legislativa por 3 años), apoyado/a por Defensores Públicos y procuradores delegados.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.pgr.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 9: CNJ (y otras) -->
+            <div class="institution-card bg-white rounded-xl shadow-sm hover:shadow-md border border-slate-200 overflow-hidden flex flex-col transition duration-200">
+                <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold px-2.5 py-1 bg-svBlue text-white rounded-md">9. CNJ</span>
+                    <i class="fa-solid fa-user-graduate text-2xl text-svBlue"></i>
+                </div>
+                <div class="p-6 flex-grow space-y-4">
+                    <h3 class="font-bold text-lg text-slate-900 leading-snug">Consejo Nacional de la Judicatura</h3>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-bullseye mr-1"></i> Función Principal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Proponer ternas para nombrar Jueces y Magistrados, evaluar el desempeño judicial de forma imparcial y dirigir la Escuela de Capacitación Judicial.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-svLightBlue uppercase tracking-wider mb-1"><i class="fa-solid fa-users mr-1"></i> ¿Quiénes lo forman?</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">7 Concejales Propietarios elegidos por la Asamblea Legislativa tras ser propuestos por gremios de abogados, jueces y sectores universitarios.</p>
+                    </div>
+                </div>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-right">
+                    <a href="https://www.cnj.gob.sv" target="_blank" rel="noopener" class="text-xs font-semibold text-svBlue hover:text-svLightBlue inline-flex items-center gap-1">Sitio Oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Publishing Guide Modal / Accordion -->
+        <section class="mt-12 bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-slate-200">
+            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-cloud-arrow-up text-svBlue"></i> ¿Cómo publicar esta página en Google / Internet gratis?
+            </h3>
+            <p class="text-sm text-slate-600 mb-6">Puedes hacer que esta página sea accesible desde cualquier parte del mundo de forma totalmente gratuita siguiendo estos sencillos pasos:</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <span class="w-7 h-7 bg-svBlue text-white font-bold rounded-full flex items-center justify-center text-xs mb-3">1</span>
+                    <h4 class="font-bold text-sm text-slate-800 mb-1">Opción GitHub Pages</h4>
+                    <p class="text-xs text-slate-600">Sube este archivo como <code class="bg-slate-200 px-1 py-0.5 rounded">index.html</code> a un repositorio público en GitHub y activa GitHub Pages en las opciones del repositorio.</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <span class="w-7 h-7 bg-svBlue text-white font-bold rounded-full flex items-center justify-center text-xs mb-3">2</span>
+                    <h4 class="font-bold text-sm text-slate-800 mb-1">Opción Netlify / Vercel</h4>
+                    <p class="text-xs text-slate-600">Ingresa a Netlify Drop (netlify.com/drop) y simplemente arrastra la carpeta que contiene este código. Te generará un enlace público inmediato.</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <span class="w-7 h-7 bg-svBlue text-white font-bold rounded-full flex items-center justify-center text-xs mb-3">3</span>
+                    <h4 class="font-bold text-sm text-slate-800 mb-1">Aparecer en Google</h4>
+                    <p class="text-xs text-slate-600">Una vez obtengas tu enlace público, ingresa a <i>Google Search Console</i> para indexar el enlace y que las personas puedan encontrarlo en búsquedas.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-2">
+            <p>© Guía Educativa de Institucionalidad Salvadoreña - Basado en los textos de Estudios Sociales y Constitución de El Salvador.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function filterCards() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.getElementsByClassName('institution-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].querySelector('h3').innerText.toLowerCase();
+                const text = cards[i].innerText.toLowerCase();
+                if (title.includes(input) || text.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
